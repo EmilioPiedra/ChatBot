@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consejero Virtual UTPL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #e3f2fd;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1a237e;
+    }
+
+    .navbar nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1a237e;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #bbdefb;
+      padding: 3rem 2rem;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0d47a1;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .hero-text button {
+      padding: 0.75rem 1.5rem;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .hero-image img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .emojis {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: #e3f2fd;
+    }
+
+    .emojis span {
+      font-size: 2rem;
+      background: white;
+      border-radius: 50%;
+      padding: 0.5rem 0.7rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    #chatbot-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Consejero UTPL</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Sobre el Chat</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Prioriza tu Salud Mental</h1>
+      <p>Este chatbot está diseñado para ayudarte en momentos difíciles con orientación emocional y apoyo práctico.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://media.airedesantafe.com.ar/p/83a48fdfcf3ed07ebcb7dffa99642869/adjuntos/268/imagenes/002/659/0002659608/salud-mental-esquizofreniajpg.jpg" alt="Salud mental">
+    </div>
+  </section>
+
+  <div class="emojis">
+    <span>🙂</span>
+    <span>😐</span>
+    <span>😔</span>
+    <span>😢</span>
+  </div>
+  <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '68563b0759deaee1ea924eb4' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</body>
+</html>
